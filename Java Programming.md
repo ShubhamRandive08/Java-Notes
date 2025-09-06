@@ -1,14 +1,14 @@
 
 ### *What is Java?*
 -  Java is an general purpose, high level, interpreted, compiled, static, function oriented, object oriented, platform independent programming language which is used to develop any kind of application.
-     `1. General Purpose - With using the JAVA we can develop any kind of applicaiton`
-     `2. High Level - Java is also human readable language, which is easily understand to the human`
-     `3. Interpreted - In the Java, there are also presents the interpreter to execute the code line by line. And which is also converts the byte code into the machin code`
-     `4. Compiled - Java can be also provide the compiler to convert the source into the byte code`
-     `5. Functional oriented - In we can also pass the one fucntion to another function as a arguments (Ex, Lambada fucntion)`
-     `6. Object oriented - In java, we can also create the object.`
+     `1. General Purpose - With using the JAVA we can develop any kind of applicaiton` <br>
+     `2. High Level - Java is also human readable language, which is easily understand to the human` <br>
+     `3. Interpreted - In the Java, there are also presents the interpreter to execute the code line by line. And which is also converts the byte code into the machin code` <br>
+     `4. Compiled - Java can be also provide the compiler to convert the source into the byte code` <br>
+     `5. Functional oriented - In we can also pass the one fucntion to another function as a arguments (Ex, Lambada fucntion)` <br>
+     `6. Object oriented - In java, we can also create the object.`<br>
 
-### *What is JRE, JVM, JDK ?*
+### *What is JRE, JVM, JDK ?*<br>
 
 - These three are main components of the Java. These are also responsible for execute and run the java application.
 -  JVM 
@@ -97,7 +97,7 @@
 - `this` refers to the global variable.
 - And it is used when the local variable and globle variable should be same.<br><br>
 
-#### What is constructor?
+#### What is constructor?<br><br>
 - Constructor can be used for initialize the object/instance variable.
 - Constructor name and class name should be same.
 - Class don't contain any return type.
@@ -106,6 +106,106 @@
 - Types of constructor :
         1. Parameterized constructor
         2. Non Parameterized constructor ( Default constructor )
+<br><br>
+```Copy
+
+public class ConUser{
+
+    ConUser(){ // Non parameterized constructor
+
+        System.out.println("0 Param");
+
+    }
+
+    ConUser(int a, int b){ // Parameterized constructor ( Default constructor )
+
+        System.out.println("2 Params");
+
+    }
+
+    public static void main(String[] args) {
+
+        ConUser con = new ConUser();
+
+        ConUser con2 = new ConUser(12,20);
+
+    }
+
+}
+```
+<br><br>
+
+```Output
+0 Param
+2 Params
+```
+
+<br><br>
+#### Constructor chaining :
+- Constructor chaining means call the one constructor from another one within same class or from parent class.
+- It is also achive with the help of this() call if the constructor within the same class.
+- If the constructor can also present in parent or chind class then this can be achive with the super class.<br><br>
+
+#### Type of variable <br>
+- Variable is a container which is used to store the data on computer memory like RAM.<br>
+
+Types of Variable -<br>
+  1. Instance variable / Non static variable / Global variable
+  2. Static variabel
+  3. Local variable<br>
+
+1. Instance variable<br>
+- Which variable created inside the class and outside of any method and constructor that variable is called `instance variable`.
+- It is also known as global / non static variable.
+- Instance variables are related to objects.
+- Instance variable value for each object will change.
+
+2. Static variable <br>
+- Which variable created with the help of static keyword this is called static variable.
+- Static variable value is comman for all objects.
+- Static variable is related with class.
+
+3. Local variable
+- Which variable is created inside the any method and constructor this is called local variable.
+- It is also used for fulfill temporary requirement.
+<br>
+
+```Copy
+
+// Can we access the instance variable in instance method : Yes
+
+// Can we access the static variable in instance method : Yes
+
+// Can we access the instance variable in static method : No directly but using Object of class which is indirectly
+
+// Can we access the static variable in static method : Yes
+
+// Static variable is accessible for both like instance method and static method. But instance variable is accessible only the instance method not for static method directly.
+
+public class InstanceVariableStaticVariableConcept {
+    int a; // Instance variable / Gloable variabel / Non static variable - Which variable also declare inside the class and outside the any method or constructor. 
+    static int b; // Static variable - which variable declare with the static keyword thats call static variable which is also related with the Class directly. Static variabel value is also commann for all object.
+
+    void returnSum(){ 
+      int a; // Local variable
+        System.out.println("The value of a : " + (a + b));
+    }
+
+    static void returnSub(){
+        int sum; // Local variable
+        System.out.println("The value of b : " + b);
+    }
+    
+    public static void main(String[] args) {
+        
+    }
+}
+
+```
+
+
+
+
 
 
 
